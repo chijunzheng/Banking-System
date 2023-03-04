@@ -16,7 +16,7 @@
 
      stage('Test') {
        steps {
-         sh 'pip install pytest'
+         sh 'pip3 install pytest'
          sh 'make test'
        }
      }
