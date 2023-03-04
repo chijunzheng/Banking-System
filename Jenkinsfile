@@ -23,7 +23,7 @@
      stage('Dockerize') {
        steps {
          sh 'docker build -t ballerchi/banking-system:1.0 .'
-	 sh 'docker tag ballerchi/banking-system:1.0 ballerchi/banking-system:latest
+	 sh 'docker tag ballerchi/banking-system:1.0 ballerchi/banking-system:latest'
        }
      }
 
