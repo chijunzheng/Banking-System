@@ -4,7 +4,7 @@
    stages {
      stage('Checkout') {
        steps {
-         git branch: 'main', url: 'https://github.com/user/repo.git'
+         git branch: 'main', url: 'https://github.com/chijunzheng/Banking-System'
        }
      }
 
