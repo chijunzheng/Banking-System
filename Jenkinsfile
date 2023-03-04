@@ -22,16 +22,17 @@
 
      stage('Dockerize') {
        steps {
-         sh 'make docker'
+         sh 'docker build -t ballerchi/banking-system:1.0 .'
+	 sh 'docker tag ballerchi/banking-system:1.0 ballerchi/banking-system:latest
        }
      }
 
      stage('Push') {
        steps {
-         withCredentials([dockerUsernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
-           sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}"
-         }
-         sh 'make push'
+           sh "docker login -u ballerchi -p ${password}"
+         
+         sh docker push ballerchi/banking-system:latest'
+	}
        }
      }
    }
