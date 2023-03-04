@@ -31,7 +31,7 @@
        steps {
            sh "docker login -u ballerchi -p ${password}"
          
-         sh docker push ballerchi/banking-system:latest'
+         sh 'docker push ballerchi/banking-system:latest'
 	
        }
      }
