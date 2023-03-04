@@ -1,7 +1,7 @@
-from banking_system.transaction import Transaction
-from banking_system.account import Account
-from banking_system.customer import Customer
-from banking_system.admin import Admin
+import transaction
+import account
+import customer
+import admin
 import pytest
 
 @pytest.fixture

@@ -1,23 +1,27 @@
-import pytest
+import unittest
 from account import Account
 
-def test_account_creation():
-    acc = Account("John Doe", 500)
-    assert acc.owner == "John Doe"
-    assert acc.balance == 500
+class TestAccount(unittest.TestCase):
 
-def test_deposit():
-    acc = Account("John Doe", 500)
-    acc.deposit(100)
-    assert acc.balance == 600
+    def setUp(self):
+        self.account = Account("Alice", 1000, "123456")
 
-def test_withdraw():
-    acc = Account("John Doe", 500)
-    acc.withdraw(200)
-    assert acc.balance == 300
+    def test_deposit(self):
+        self.assertEqual(self.account.deposit(500), 1500)
+        self.assertEqual(self.account.deposit(-500), 1500)
 
-def test_insufficient_balance():
-    acc = Account("John Doe", 500)
-    with pytest.raises(ValueError):
-        acc.withdraw(600)
+    def test_withdraw(self):
+        self.assertEqual(self.account.withdraw(500), 500)
+        self.assertEqual(self.account.withdraw(-500), -1)
+        self.assertEqual(self.account.withdraw(1500), -1)
+
+    def test_balance_enquiry(self):
+        self.assertEqual(self.account.balance_enquiry(), 1000)
+
+    def test_view_details(self):
+        expected_output = "Name: Alice\nAccount Number: 123456\nBalance: 1000"
+        self.assertEqual(self.account.view_details(), expected_output)
+
+if __name__ == '__main__':
+    unittest.main()
 
