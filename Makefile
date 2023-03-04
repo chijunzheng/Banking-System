@@ -6,7 +6,6 @@ build:
 	python3 setup.py build
 
 test:
-	pip install pytest
 	python3 -m pytest
 
 dockerize:
