@@ -78,5 +78,5 @@ class TestDatabase(unittest.TestCase):
         self.db.save_account(acc2)
         with open(self.accounts_file, "r") as f:
             accounts_json = f.read()
-        expected_json = '{"123": {"account_type": "savings", "name": "John Doe", "balance": 1000}, "456": {"account_type": "current", "name": "Jane Doe", "balance": 500, "
+        expected_json = '{"123": {"account_type": "savings", "name": "John Doe", "balance": 1000}, "456": {"account_type": "current", "name": "Jane Doe", "balance": 500, "overdraft_limit": 500}}'
 
