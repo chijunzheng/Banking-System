@@ -1,6 +1,6 @@
 import json
 from typing import Dict, List, Union
-from account import Account, CurrentAccount, SavingsAccount
+from src.account import Account
 
 
 class Database:
