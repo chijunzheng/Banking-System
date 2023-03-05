@@ -1,7 +1,7 @@
-import transaction
-import account
-import customer
-import admin
+from ..src/transaction import Transaction
+from ..src/account import Account
+from ..src/customer import Customer
+from ..src/admin import Admin
 import pytest
 
 @pytest.fixture

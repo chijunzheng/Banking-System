@@ -1,5 +1,5 @@
 import unittest
-from banking_system import Customer
+from ..src/customer import Customer
 
 
 class TestCustomer(unittest.TestCase):

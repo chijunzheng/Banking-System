@@ -1,5 +1,5 @@
 import unittest
-from account import Account
+from ..src/account import Account
 
 class TestAccount(unittest.TestCase):
 
