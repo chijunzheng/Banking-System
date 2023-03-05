@@ -1,9 +1,4 @@
-class User:
-    def __init__(self, name, email, password):
-        self.name = name
-        self.email = email
-        self.password = password
-
+from user import User
 
 class Customer(User):
     def __init__(self, name, email, password, account_number):

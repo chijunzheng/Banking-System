@@ -1,7 +1,7 @@
 import os
 import tempfile
 import unittest
-from src.account import Account, CurrentAccount, SavingsAccount
+from src.account import Account
 from src.database import Database
 
 class TestDatabase(unittest.TestCase):
